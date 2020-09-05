@@ -16,6 +16,9 @@ public class DdMenusServiceImpl implements  DdMenusService {
 
     @Override
     public List<DdMenus> loadDdMenusList() {
+
+        System.out.println("前来觐见1");
         return ddMenusMapper.loadDdMenusList();
+
     }
 }
