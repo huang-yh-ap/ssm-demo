@@ -1,30 +1,30 @@
-#tomcatÅäÖÃ
+#tomcaté…ç½®
 server:
-  port: 8081  #¶Ë¿ÚºÅ
+  port: 8081  #ç«¯å£å·
   servlet:
-    context-path: /dd   #ÉÏÏÂÎÄ
+    context-path: /dd   #ä¸Šä¸‹æ–‡
   tomcat:
-    uri-encoding: utf-8 #ÇëÇóÖĞÎÄÂÒÂë
+    uri-encoding: utf-8 #è¯·æ±‚ä¸­æ–‡ä¹±ç 
 
-#ÅäÖÃÊı¾İ¿âÁ¬½ÓĞÅÏ¢
+#é…ç½®æ•°æ®åº“è¿æ¥ä¿¡æ¯
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dd?serverTimezone=UTC
     username: root
     password: 123
-    type: com.alibaba.druid.pool.DruidDataSource #Êı¾İ¿âÁ¬½Ó³Ø
+    type: com.alibaba.druid.pool.DruidDataSource #æ•°æ®åº“è¿æ¥æ± 
   mvc:
-    view: #ÅäÖÃÊÓÍ¼½âÎöÆ÷
+    view: #é…ç½®è§†å›¾è§£æå™¨
       prefix: /
       suffix: .jsp
 mybatis:
-  #¼ÓÔØmybatisµÄÓ³ÉäÎÄ¼ş
+  #åŠ è½½mybatisçš„æ˜ å°„æ–‡ä»¶
   mapper-locations: classpath:/mapper/*.xml
-  #Ö¸¶¨ÁËpojoÊµÌåÀàËùÔÚµÄpackage
+  #æŒ‡å®šäº†pojoå®ä½“ç±»æ‰€åœ¨çš„package
   type-aliases-package: com.huang.pojo
-#ÅäÖÃ·ÖÒ³²å¼ş
+#é…ç½®åˆ†é¡µæ’ä»¶
 pagehelper:
   auto-dialect: mysql
-  page-size-zero: true  #µ±pagesize=0,²»½øĞĞ·ÖÒ³
-  reasonable: ture #·ÖÒ³ºÏÀí»¯²ÎÊı
+  page-size-zero: true  #å½“pagesize=0,ä¸è¿›è¡Œåˆ†é¡µ
+  reasonable: ture #åˆ†é¡µåˆç†åŒ–å‚æ•°
