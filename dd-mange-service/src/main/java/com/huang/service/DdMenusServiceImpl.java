@@ -18,6 +18,7 @@ public class DdMenusServiceImpl implements  DdMenusService {
     public List<DdMenus> loadDdMenusList() {
 
         System.out.println("前来觐见1");
+        System.out.println("增强service");
         return ddMenusMapper.loadDdMenusList();
 
     }
