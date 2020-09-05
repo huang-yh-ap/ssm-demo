@@ -1,0 +1,30 @@
+#tomcat配置
+server:
+  port: 8081  #端口号
+  servlet:
+    context-path: /dd   #上下文
+  tomcat:
+    uri-encoding: utf-8 #请求中文乱码
+
+#配置数据库连接信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dd?serverTimezone=UTC
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource #数据库连接池
+  mvc:
+    view: #配置视图解析器
+      prefix: /
+      suffix: .jsp
+mybatis:
+  #加载mybatis的映射文件
+  mapper-locations: classpath:/mapper/*.xml
+  #指定了pojo实体类所在的package
+  type-aliases-package: com.huang.pojo
+#配置分页插件
+pagehelper:
+  auto-dialect: mysql
+  page-size-zero: true  #当pagesize=0,不进行分页
+  reasonable: ture #分页合理化参数
